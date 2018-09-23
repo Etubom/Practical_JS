@@ -7,3 +7,15 @@
  It should have a function to delete todos 
  * 
  */
+
+let todos = ["item1", "item2", "item3", "items4"];
+
+const displayTodos = () => console.log("This is my todos list " + todos);
+
+displayTodos(); // display todos
+
+const addTodos = todo => {
+  todos.push(todo);
+  displayTodos();
+};
+addTodos("item 5 add with push"); // add new todos
