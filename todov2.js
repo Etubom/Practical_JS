@@ -24,4 +24,10 @@ const changeTodo = (itemNumberTochange, newValue) => {
   todos[itemNumberTochange] = newValue;
   displayTodos();
 };
-changeTodo(0, "changedTodo");
+changeTodo(0, "changedTodo"); //change todo
+
+const deleteTodos = position => {
+  todos.splice(position, 1);
+  displayTodos();
+};
+deleteTodos(3); //deletes todos
