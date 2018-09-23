@@ -19,3 +19,9 @@ const addTodos = todo => {
   displayTodos();
 };
 addTodos("item 5 add with push"); // add new todos
+
+const changeTodo = (itemNumberTochange, newValue) => {
+  todos[itemNumberTochange] = newValue;
+  displayTodos();
+};
+changeTodo(0, "changedTodo");
