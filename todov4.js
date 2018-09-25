@@ -26,6 +26,7 @@ let todoList = {
     this.displayTodos();
   },
   toggleCompleted: function(position) {
+    // change Iscompleted boolean value
     const todo = this.todos[position];
     todo.IsCompleted = !todo.IsCompleted;
     this.displayTodos();
