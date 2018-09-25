@@ -13,7 +13,7 @@ let todoList = {
     //add Obj with properties
     this.todos.push({
       todoText: todoText,
-      completed: false
+      IsCompleted: false
     });
     this.displayTodos();
   },
@@ -23,6 +23,11 @@ let todoList = {
   },
   deleteTodo: function(position) {
     this.todos.splice(position, 1);
+    this.displayTodos();
+  },
+  toggleCompleted: function(position) {
+    const todo = this.todos[position];
+    todo.IsCompleted = !todo.IsCompleted;
     this.displayTodos();
   }
 };
