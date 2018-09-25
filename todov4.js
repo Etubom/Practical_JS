@@ -1,0 +1,6 @@
+/**
+ * 
+ todoList.addTodo should add objects
+ todoList.changeTodo should change the todoText property
+ todoList.toggleCompleted should change the completed property
+ */
