@@ -10,14 +10,15 @@ let todoList = {
     console.log("My Todos: ", this.todos);
   },
   addTodo: function(todoText) {
+    //add Obj with properties
     this.todos.push({
       todoText: todoText,
       completed: false
     });
     this.displayTodos();
   },
-  changeTodo: function(indexValueToChange, newValue) {
-    this.todos[indexValueToChange] = newValue;
+  changeTodo: function(ObjIndex, todoText) {
+    this.todos[ObjIndex].todoText = todoText; // change text on Obj
     this.displayTodos();
   },
   deleteTodo: function(position) {
