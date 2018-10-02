@@ -16,9 +16,9 @@ let todoList = {
       console.log("My Todos: ", this.todos);
       this.todos.forEach(function(todo) {
         if (todo.IsCompleted === true) {
-          console.log("(X)", todo.todoText); //display todos shows todo text
+          console.log("(X)", todo.todoText); //display (X) on completed todos
         } else {
-          console.log("()", todo.todoText);
+          console.log("()", todo.todoText); // displays () on incompleted todos
         }
       });
     }
