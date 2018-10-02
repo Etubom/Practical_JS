@@ -9,13 +9,17 @@
 let todoList = {
   todos: [],
   displayTodos: function() {
-    console.log("My Todos: ", this.todos);
-    this.todos.forEach(function(todo) {
-      console.log(todo.todoText);
-    });
+    if (this.todos.length === 0) {
+      //check if todo list is empty
+      console.log("There are not todos in your list.");
+    } else {
+      console.log("My Todos: ", this.todos);
+      this.todos.forEach(function(todo) {
+        console.log(todo.todoText); //display todos shows todo text
+      });
+    }
   },
   addTodo: function(todoText) {
-    //add Obj with properties
     this.todos.push({
       todoText: todoText,
       IsCompleted: false
@@ -23,7 +27,7 @@ let todoList = {
     this.displayTodos();
   },
   changeTodo: function(ObjIndex, todoText) {
-    this.todos[ObjIndex].todoText = todoText; // change text on Obj
+    this.todos[ObjIndex].todoText = todoText;
     this.displayTodos();
   },
   deleteTodo: function(position) {
@@ -31,7 +35,6 @@ let todoList = {
     this.displayTodos();
   },
   toggleCompleted: function(position) {
-    // change Iscompleted boolean value
     const todo = this.todos[position];
     todo.IsCompleted = !todo.IsCompleted;
     this.displayTodos();
