@@ -15,7 +15,11 @@ let todoList = {
     } else {
       console.log("My Todos: ", this.todos);
       this.todos.forEach(function(todo) {
-        console.log(todo.todoText); //display todos shows todo text
+        if (todo.IsCompleted === true) {
+          console.log("(X)", todo.todoText); //display todos shows todo text
+        } else {
+          console.log("()", todo.todoText);
+        }
       });
     }
   },
