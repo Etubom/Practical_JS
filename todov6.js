@@ -54,6 +54,11 @@ let todoList = {
       this.todos.forEach(function(todo) {
         todo.IsCompleted = false;
       });
+    } else {
+      //case2 otherwise make everything true
+      this.todos.forEach(function(todo) {
+        todo.IsCompleted = true;
+      });
     }
     this.displayTodos();
   }
