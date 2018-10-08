@@ -39,5 +39,22 @@ let todoList = {
     const todo = this.todos[position];
     todo.IsCompleted = !todo.IsCompleted;
     this.displayTodos();
+  },
+  toggleAll: function() {
+    let totalTodos = this.todos.length;
+    let completedTodos = 0;
+
+    //get number of completed todos
+    this.todos.forEach(function(todo) {
+      if (todo.IsCompleted === true) {
+        completedTodos++;
+      }
+    });
+    if (completedTodos === totalTodos) {
+      this.todos.forEach(function(todo) {
+        todo.IsCompleted = false;
+      });
+    }
+    this.displayTodos();
   }
 };
