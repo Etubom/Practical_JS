@@ -9,10 +9,8 @@ let todoList = {
   todos: [],
   displayTodos: function() {
     if (this.todos.length === 0) {
-      //check if todo list is empty
       console.log("There are not todos in your list.");
     } else {
-      console.log("My Todos: ", this.todos);
       this.todos.forEach(function(todo) {
         if (todo.IsCompleted === true) {
           console.log("(X)", todo.todoText); //display (X) on completed todos
